@@ -19,3 +19,9 @@
 [submodule ".vim/pack/jwilner/start/vim-colors-solarized"]
 	path = .vim/pack/jwilner/start/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule ".vim/pack/jwilner/start/notational-fzf-vim"]
+	path = .vim/pack/jwilner/start/notational-fzf-vim
+	url = https://github.com/Alok/notational-fzf-vim

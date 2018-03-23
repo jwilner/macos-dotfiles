@@ -1,8 +1,8 @@
 
-readonly GIT_PATH=/usr/local/bin/git
-
 # for dot file maintenance
 function config {
-  ${GIT_PATH} --git-dir=$HOME/.cfg --work-tree=$HOME "${@}"
+  /usr/local/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME "${@}"
 }
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
