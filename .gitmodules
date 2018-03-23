@@ -1,0 +1,6 @@
+[submodule ".vim/pack/jwilner/start/vim-airline"]
+	path = .vim/pack/jwilner/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "/Users/wilner/.vim/pack/jwilner/start/ale"]
+	path = /Users/wilner/.vim/pack/jwilner/start/ale
+	url = https://github.com/w0rp/ale.git
