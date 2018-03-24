@@ -8,6 +8,7 @@ Tries to set up some reasonable defaults for the stuff I use.
 - Manual installs:
     - [Python2 / Python 3](https://www.python.org/downloads/)
     - [golang](https://golang.org/dl/)
+    - [nodejs](https://nodejs.org/en/download/)
     - [Intellij IDEA](https://www.jetbrains.com/idea/)
     - [PyCharm](https://www.jetbrains.com/pycharm/)
     - [Goland](https://www.jetbrains.com/go/)
