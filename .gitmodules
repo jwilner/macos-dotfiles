@@ -28,6 +28,12 @@
 [submodule ".bash-git-prompt"]
 	path = .bash-git-prompt
 	url = https://github.com/magicmonty/bash-git-prompt.git
-[submodule "/Users/wilner/.fasd/fasd"]
-	path = /Users/wilner/.fasd/fasd
+[submodule ".fasd/fasd"]
+	path = .fasd/fasd
 	url = https://github.com/clvv/fasd.git
+[submodule ".blackbox"]
+	path = .blackbox
+	url = https://github.com/StackExchange/blackbox
+[submodule ".solarized"]
+	path = .solarized
+	url = git://github.com/altercation/solarized.git

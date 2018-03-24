@@ -1,27 +1,18 @@
 
 # add local path
 PATH="${PATH}:${HOME}/bin"
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+
+# go path
+GO_PATH="${HOME}/go"
 
 # for dot file maintenance
 function config {
   git --git-dir=$HOME/.cfg --work-tree=$HOME "${@}"
 }
 
-
-function _conditional_source {
-  [ -r "${1}" ] && . "${1}"
-}
-
-# add fzf stuff
-_conditional_source ~/.bashrc.d/fzf.sh
-
-# add git completion
-_conditional_source ~/.bashrc.d/git-completion.bash
-
-# wire in fasd jumping
-_conditional_source ~/.bashrc.d/fasd-init.sh
-
-# wire in git prompt
-_conditional_source ~/.bashrc.d/git-prompt-init.sh
-
-unset _conditional_source
+# source stuff in order
+for path in ~/.bashrc.d/*.sh; do
+  [ -r "${path}" ] && . "${path}"
+done
