@@ -1,0 +1,22 @@
+# overrides (e.g. a work email) can be defined within .gitconfig.overrides
+[user]
+    name = Joe Wilner
+    email = jhwilner1@gmail.com
+[core]
+    editor = /usr/local/bin/vim
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    s = status -s
+    cl = clone
+    r = reset
+    cp = cherry-pick
+    gr = grep -Ii
+    d = diff
+    dc = diff --cached
+    au = add --update
+[include]
+    path = .gitconfig.overrides
+
