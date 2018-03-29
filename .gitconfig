@@ -6,6 +6,7 @@
     editor = /usr/local/bin/vim
 [alias]
     co = checkout
+    cob = checkout -b
     br = branch
     ci = commit
     st = status

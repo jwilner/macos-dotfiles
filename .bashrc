@@ -14,6 +14,6 @@ function config {
 }
 
 # source stuff in order
-for path in ~/.bashrc.d/*.sh; do
+for path in ~/.bashrc.d/*.{,ba}sh; do
   [ -r "${path}" ] && . "${path}"
 done
