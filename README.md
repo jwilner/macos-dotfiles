@@ -4,6 +4,7 @@ Tries to set up some reasonable defaults for the stuff I use.
 
 ## installation
 - [set up repo](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
+- `config submodule init && config submodule update`
 - `source ~/.bashrc && dot_set_up`
 - Manual installs:
     - [Python2 / Python 3](https://www.python.org/downloads/)
