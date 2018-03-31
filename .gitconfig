@@ -21,3 +21,5 @@
 [include]
     path = .gitconfig.overrides
 
+[credential]
+	helper = osxkeychain
