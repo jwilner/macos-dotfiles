@@ -7,6 +7,7 @@ Tries to set up some reasonable defaults for the stuff I use.
 - `config submodule init && config submodule update`
 - `source ~/.bashrc && dot_set_up`
 - Manual installs:
+    - [iTerm2](https://www.iterm2.com/)
     - [Python2 / Python 3](https://www.python.org/downloads/)
     - [golang](https://golang.org/dl/)
     - [nodejs](https://nodejs.org/en/download/)
