@@ -17,4 +17,5 @@ Tries to set up some reasonable defaults for the stuff I use.
         * [Goland](https://www.jetbrains.com/go/)
     - [Wireshark](https://www.wireshark.org/download.html)
     - [Docker](https://store.docker.com/search?type=edition&offering=community)
+    - Moom
 - `dot_finish_set_up`
