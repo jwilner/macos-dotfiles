@@ -4,7 +4,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 
 # go path
-GO_PATH="${HOME}/go"
+GOPATH="${HOME}/go"
 
 alias git=hub
 
@@ -17,3 +17,4 @@ function config {
 for path in ~/.bashrc.d/*.{,ba}sh; do
   [ -r "${path}" ] && . "${path}"
 done
+
