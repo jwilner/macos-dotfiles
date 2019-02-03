@@ -13,7 +13,7 @@ Tries to set up some reasonable defaults for the stuff I use.
     - [Python2 / Python 3](https://www.python.org/downloads/)
     - [golang](https://golang.org/dl/)
     - [nodejs](https://nodejs.org/en/download/)
-    - [Rust](https://doc.rust-lang.org/cargo/getting-started/installation.html) -- `curl -sSf https://static.rust-lang.org/rustup.sh | sh`
+    - [Rust](https://rustup.rs/) -- `curl https://sh.rustup.rs -sSf | sh`
     - [JetBrains Toolbox](https://www.jetbrains.com/toolbox/app/)
         * [Intellij IDEA](https://www.jetbrains.com/idea/)
         * [PyCharm](https://www.jetbrains.com/pycharm/)
