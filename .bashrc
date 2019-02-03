@@ -6,7 +6,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 # go path
 GOPATH="${HOME}/go"
 PATH="${PATH}:${GOPATH}/bin/"
-
 PATH="${PATH}:${HOME}/.cargo/bin"
 
 alias git=hub
