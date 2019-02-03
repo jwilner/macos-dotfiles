@@ -12,3 +12,4 @@ fi
 # ------------
 source "${HOME}/.fzf/shell/key-bindings.bash"
 
+export FZF_DEFAULT_COMMAND='fd --type f'
