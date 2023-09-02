@@ -1,5 +1,4 @@
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=jwilner/dotfiles)](https://dependabot.com)
-# my OSX dotfiles
+# my macos dotfiles
 
 Tries to set up some reasonable defaults for the stuff I use.
 
