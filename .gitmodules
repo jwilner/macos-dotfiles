@@ -22,9 +22,6 @@
 [submodule ".vim/pack/jwilner/start/notational-fzf-vim"]
 	path = .vim/pack/jwilner/start/notational-fzf-vim
 	url = https://github.com/Alok/notational-fzf-vim
-[submodule ".solarized"]
-	path = .solarized
-	url = https://github.com/altercation/solarized.git
 [submodule ".vim/pack/themes/opt/solarized8"]
 	path = .vim/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git

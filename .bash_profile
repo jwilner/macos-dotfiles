@@ -1,5 +1,5 @@
 # run on log in
-eval $(keychain --eval --inherit any id_rsa)
+eval "$(keychain --eval --inherit any id_ed25519)"
 
 # delegate to bashrc
-[ -r ".bashrc" ] && . ~/.bashrc
+[[ -r "${HOME}/.bashrc" ]] && . "${HOME}/.bashrc"
