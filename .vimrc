@@ -21,7 +21,7 @@ set expandtab
 " solarized
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme default
 " end solarized
 
 " fzf

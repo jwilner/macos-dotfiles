@@ -7,20 +7,24 @@ function dot_install_brew {
   fi
 }
 
+function dot_install_kitty {
+  if ! command -v kitty >&2; then
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+  else
+    echo "kitty is already installed" >&2
+  fi
+}
+
 function dot_dump_brew {
-  (cd ~/.requirements && brew bundle dump --force)
+  brew bundle dump --force --file ~/.requirements/Brewfile
 }
 
 function dot_load_brew {
-  (cd ~/.requirements && brew bundle install)
+    brew bundle install --file ~/.requirements/Brewfile
 }
 
 function dot_update_fasd {
-  (cd ~/.fasd/fasd && PREFIX="${HOME}" make install)
-}
-
-function dot_update_blackbox {
-  (cd ~/.blackbox && make symlinks-install)
+  PREFIX="${HOME}" make -C ~/.fasd/fasd install
 }
 
 function dot_pip_install {
@@ -31,7 +35,6 @@ function dot_set_up {
   dot_install_brew
   dot_load_brew
   dot_update_fasd
-  dot_update_blackbox
 }
 
 function dot_finish_set_up {
