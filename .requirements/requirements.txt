@@ -1,3 +1,0 @@
-awscli==1.14.59
-jupyter==1.0.0
-ipython==8.10.0

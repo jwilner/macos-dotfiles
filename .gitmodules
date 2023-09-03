@@ -18,22 +18,10 @@
 	url = https://github.com/tpope/vim-sensible.git
 [submodule ".vim/pack/jwilner/start/vim-colors-solarized"]
 	path = .vim/pack/jwilner/start/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".fzf"]
-	path = .fzf
-	url = https://github.com/junegunn/fzf.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/pack/jwilner/start/notational-fzf-vim"]
 	path = .vim/pack/jwilner/start/notational-fzf-vim
 	url = https://github.com/Alok/notational-fzf-vim
-[submodule ".bash-git-prompt"]
-	path = .bash-git-prompt
-	url = https://github.com/magicmonty/bash-git-prompt.git
-[submodule ".fasd/fasd"]
-	path = .fasd/fasd
-	url = https://github.com/clvv/fasd.git
-[submodule ".blackbox"]
-	path = .blackbox
-	url = https://github.com/StackExchange/blackbox
-[submodule ".solarized"]
-	path = .solarized
-	url = git://github.com/altercation/solarized.git
+[submodule ".vim/pack/themes/opt/solarized8"]
+	path = .vim/pack/themes/opt/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git

@@ -20,17 +20,14 @@ set expandtab
 
 " solarized
 syntax enable
+set termguicolors
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 " end solarized
 
 " fzf
 set rtp+=~/.fzf
 " end fzf
-
-" notational-fzf-vim: define search paths 
-let g:nv_search_paths = ['~/notes']
-" end notational-fzf-vim
 
 " clipboard finagling to default to OSX system clipboard
 set clipboard=unnamed
