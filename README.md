@@ -1,24 +1,15 @@
 # my macos dotfiles
 
-Tries to set up some reasonable defaults for the stuff I use.
+Mainly brew and vim dependencies for my development environment. See [.Brewfile](.Brewfile).
 
 ## installation
-- Precursors: [Chrome](https://www.google.com/chrome/)
-- [set up repo](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
-- `config submodule init && config submodule update`
-- `source ~/.bashrc && dot_set_up`
-- Manual installs:
-    - [iTerm2](https://www.iterm2.com/)
-    - [Python2 / Python 3](https://www.python.org/downloads/)
-    - [golang](https://golang.org/dl/)
-    - [nodejs](https://nodejs.org/en/download/)
-    - [Rust](https://rustup.rs/) -- `curl https://sh.rustup.rs -sSf | sh`
-    - [JetBrains Toolbox](https://www.jetbrains.com/toolbox/app/)
-        * [Intellij IDEA](https://www.jetbrains.com/idea/)
-        * [PyCharm](https://www.jetbrains.com/pycharm/)
-        * [Goland](https://www.jetbrains.com/go/)
-    - [Wireshark](https://www.wireshark.org/download.html)
-    - [Docker](https://store.docker.com/search?type=edition&offering=community)
-    - [Moom](https://itunes.apple.com/us/app/moom/id419330170?mt=12)
-    - [Todoist](https://itunes.apple.com/us/app/todoist-organize-your-life/id585829637?mt=12)
-- `dot_finish_set_up`
+
+Installed from a bare git module as described [here](https://www.atlassian.com/git/tutorials/dotfiles).
+
+- Clone bare repo to a subdir: `git clone --bare https://github.com/jwilner/macos-dotfiles.git "${HOME}"/.cfg`
+- Define helper alias: `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
+- Checkout config `config checkout` (might need to resolve conflicts)
+- Ignore untracked files: `config config --local status.showUntrackedFiles no`
+- Download submodules (mainly vim packages): `config submodule init && config submodule update`
+- Install `brew`: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- Install `brew` managed dependencies: `brew bundle install --global`
