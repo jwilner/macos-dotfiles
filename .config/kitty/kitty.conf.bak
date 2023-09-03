@@ -2023,6 +2023,6 @@ shell /usr/local/bin/bash
 
 
 # BEGIN_KITTY_THEME
-# Solarized Dark
+# Solarized8 Dark
 include current-theme.conf
 # END_KITTY_THEME
