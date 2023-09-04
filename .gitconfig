@@ -18,10 +18,10 @@
     d = diff
     dc = diff --cached
     au = add --update
-[include]
-    path = .gitconfig.overrides
-
 [credential]
 	helper = osxkeychain
 [push]
 	default = current
+[include]
+    path = .gitconfig.overrides
+

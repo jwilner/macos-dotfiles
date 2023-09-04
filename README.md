@@ -1,6 +1,13 @@
 # my macos dotfiles
 
-Mainly brew and vim dependencies for my development environment. See [.Brewfile](.Brewfile).
+Dependencies and config for my MacOS development environment. Uses [kitty](https://sw.kovidgoyal.net/kitty/) as the terminal emulator. Aggressively updated with dependabot.
+
+Points of interest:
+
+- [.Brewfile](.Brewfile)
+- [.vimrc](.vimrc)
+- [.vim/](.vim/)
+- [.gitconfig](.gitconfig)
 
 ## installation
 
@@ -16,6 +23,29 @@ $ command -v brew > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.gith
 $ brew bundle install --global  # use global Brewfile just checked out
 ```
 
+At this point you should probably switch to `kitty` from whatever terminal you were using before.
+
+### follow up: gitconfig overrides
+
+Set up a specific work email for git.
+
+```shell
+$ cat <<EOF > .gitconfig.overrides 
+[user]
+    email = me@workemail.com
+EOF
+```
+
+### follow up: generate an ssh key
+
+Usually need this for one reason or another and will then be managed by [funtoo keychain](https://www.funtoo.org/Funtoo:Keychain).
+
+```shell
+$ ssh-keygen -t ed25519 -C "me@workemail.com"
+```
+
+### follow up: language envs
+
 Rather than explicitly installing languages with Brew, I use brew to install common language environment management tools and leave configuring the language itself for later.
 
 Language environment managers:
@@ -24,3 +54,6 @@ Language environment managers:
 
 Golang I just [download](https://go.dev/dl/) and use the [built in management approach](https://go.dev/doc/manage-install).
 
+## config management
+
+- Update .Brewfile with `brew bundle dump --global --force --describe`
