@@ -25,6 +25,10 @@ $ brew bundle install --global  # use global Brewfile just checked out
 
 At this point you should probably switch to `kitty` from whatever terminal you were using before.
 
+### follow up: change system shell
+
+Use the modern version of bash that was just installed: `chsh -s /usr/local/bin/bash`.
+
 ### follow up: gitconfig overrides
 
 Set up a specific work email for git.
