@@ -51,6 +51,8 @@ brew "pyenv"
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Rust toolchain installer
+brew "rustup-init"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Autoformat shell script source code
