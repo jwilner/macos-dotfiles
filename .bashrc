@@ -28,7 +28,7 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 . ".config/fzf/fzf.bash"
 
 # git completion
-. ".config/git-completion.bash"
+. ".config/git/completion.sh"
 
 # custom shortcuts
 . ".config/shortcuts.sh"
