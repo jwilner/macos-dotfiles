@@ -3,7 +3,15 @@
     name = Joe Wilner
     email = jhwilner1@gmail.com
 [core]
-    editor = /usr/local/bin/vim
+    editor = vi
+    pager = delta
+    hooksPath = ~/.config/git/hooks
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
 [alias]
     co = checkout
     cob = checkout -b
@@ -19,9 +27,13 @@
     dc = diff --cached
     au = add --update
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [push]
-	default = current
+    default = current
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    syntax-theme = Solarized (dark)
 [include]
     path = .gitconfig.overrides
 

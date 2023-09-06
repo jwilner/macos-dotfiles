@@ -1,46 +1,38 @@
-# add local path
-PATH="${PATH}:${HOME}/bin"
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export EDITOR=vim
+export PATH="${PATH}:${HOME}/bin"
 
-# go path
-GOPATH="${HOME}/go"
-PATH="${PATH}:${GOPATH}/bin/"
-PATH="${PATH}:${HOME}/.cargo/bin"
+# golang
+export GOPATH="${HOME}/go"
+export GOBIN="${GOPATH}/bin" # default val but being explicit
+export PATH="${PATH}:${GOBIN}"
 
-# for dot file maintenance
-function config {
-  git --git-dir=$HOME/.cfg --work-tree=$HOME "${@}"
-}
+# rust
+export CARGO_HOME="${HOME}/.cargo" # default val but being explicit
+# shellcheck source=.cargo/env
+. "${CARGO_HOME}/env"
+export PATH="${PATH}:${CARGO_HOME}/bin"
 
-# source stuff in order
-for path in "${HOME}"/.bashrc.d/*.{,ba}sh; do
-  [[ -r "${path}" ]] && . "${path}"
-done
-
-eval "$(starship init bash)"
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION
-
+# python
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# kitty
+# shellcheck source=/Applications/kitty.app/Contents/Resources/kitty/shell-integration/bash/kitty.bash
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
 
-# fzf set up
-[[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
-. "$HOME/.cargo/env"
+# fzf
+. ".config/fzf/fzf.bash"
 
-_direnv_hook() {
-  local previous_exit_status=$?;
-  trap -- '' SIGINT;
-  eval "$("/usr/local/bin/direnv" export bash)";
-  trap - SIGINT;
-  return $previous_exit_status;
-};
-if ! [[ "${PROMPT_COMMAND:-}" =~ _direnv_hook ]]; then
-  PROMPT_COMMAND="_direnv_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
-fi
+# git completion
+. ".config/git-completion.bash"
+
+# custom shortcuts
+. ".config/shortcuts.sh"
+
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+eval "$(direnv hook bash)"

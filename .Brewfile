@@ -13,6 +13,8 @@ brew "automake"
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Python code formatter
+brew "black"
 # Statistics utility to count lines of code
 brew "cloc"
 # Cross-platform make
@@ -37,6 +39,10 @@ brew "nettle"
 brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Language server for the Go language
+brew "gopls"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
@@ -67,6 +73,8 @@ brew "tree"
 brew "vim"
 # Internet file retriever
 brew "wget"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # GPU-based terminal emulator

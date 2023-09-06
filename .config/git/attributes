@@ -1,0 +1,6 @@
+*.go diff=golang
+*.html diff=html
+*.java diff=java
+*.py diff=python
+*.rs diff=rust
+*.sh diff=bash

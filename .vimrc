@@ -9,7 +9,7 @@ set number
 " enable scrolling, text grabbing etc
 set mouse=a
 
-filetype plugin indent on
+filetype plugin on
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -40,3 +40,6 @@ packloadall
 " Load all of the helptags now, ignoring errors
 silent! helptags ALL
 " end ALE
+
+" play nice with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']

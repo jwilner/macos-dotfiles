@@ -25,3 +25,6 @@
 [submodule ".vim/pack/themes/opt/solarized8"]
 	path = .vim/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule ".vim/pack/jwilner/start/editorconfig-vim"]
+	path = .vim/pack/jwilner/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git

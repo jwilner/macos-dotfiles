@@ -1,13 +1,12 @@
 # my macos dotfiles
 
-Dependencies and config for my MacOS development environment. Uses [kitty](https://sw.kovidgoyal.net/kitty/) as the terminal emulator. Aggressively updated with dependabot.
+Dependencies and config for my MacOS development environment. Aggressively updated with dependabot.
 
-Points of interest:
+High level choices:
 
-- [.Brewfile](.Brewfile)
-- [.vimrc](.vimrc)
-- [.vim/](.vim/)
-- [.gitconfig](.gitconfig)
+- [kitty](https://sw.kovidgoyal.net/kitty/) for terminal emulator
+- bash (latest available version) for shell (not zsh)
+- vim for CLI editor (although I assume more involved development happens w/in Jetbrains IDEs)
 
 ## installation
 

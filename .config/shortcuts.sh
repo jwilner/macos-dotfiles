@@ -1,8 +1,3 @@
-# because docker-compose is a long f'ing name
-function dcmp {
-  docker-compose "${@}"
-}
-
 # file list -- primes fzf with my defaults when you're looking at files
 function fl {
   if [ "${#}" -gt 0 ]; then
@@ -14,6 +9,16 @@ function fl {
 
 # jump to editing a file from a list
 function jmp {
-  local found=$(fl "${@}") || return 1
+  local found
+  found=$(fl "${@}") || return 1
   "${EDITOR:-vi}" "${found}"
+}
+
+# for dot file maintenance
+function config {
+  git --git-dir="$HOME/.cfg" --work-tree="$HOME" "${@}"
+}
+
+function config_dump_brew {
+  brew bundle dump --describe --global --force
 }
