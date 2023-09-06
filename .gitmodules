@@ -16,9 +16,6 @@
 [submodule ".vim/pack/jwilner/start/vim-sensible"]
 	path = .vim/pack/jwilner/start/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule ".vim/pack/jwilner/start/vim-colors-solarized"]
-	path = .vim/pack/jwilner/start/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/pack/themes/opt/solarized8"]
 	path = .vim/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
