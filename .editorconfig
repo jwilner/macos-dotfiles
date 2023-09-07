@@ -28,7 +28,7 @@ ij_go_run_go_fmt_on_reformat = true
 indent_size = 4
 
 [*.md]
-# trailing whitespace is significant in Markdown
+# trailing whitespace can be significant in Markdown
 trim_trailing_whitespace = false
 indent_size = 4
 

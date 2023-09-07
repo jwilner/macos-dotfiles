@@ -39,7 +39,7 @@ Use the modern version of bash that was just installed: `chsh -s /usr/local/bin/
 Set up a specific work email for git.
 
 ```shell
-$ cat <<EOF > .gitconfig.overrides 
+$ cat <<EOF > .gitconfig.overrides
 [user]
     email = me@workemail.com
 EOF
@@ -65,5 +65,9 @@ Golang I just [download](https://go.dev/dl/) and use the [built in management ap
 
 ## config management
 
-- Update [.Brewfile](.Brewfile) with `config_brew_dump`
+`brew bundle` is primed with appropriate args under `config brew`.
 
+Run:
+- `config brew install`
+- `config brew dump --force` -- update [.Brewfile](.Brewfile)
+- `config brew cleanup` -- remove anything not in [.Brewfile](.Brewfile)

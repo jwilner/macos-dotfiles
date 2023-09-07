@@ -16,9 +16,13 @@ function jmp {
 
 # for dot file maintenance
 function config {
-  git --git-dir="$HOME/.cfg" --work-tree="$HOME" "${@}"
+  case "${1}" in
+    brew)
+      brew bundle --describe --global "${@:2}"
+      ;;
+    *)
+      git --git-dir="$HOME/.cfg" --work-tree="$HOME" "${@}"
+      ;;
+  esac
 }
 
-function config_brew_dump {
-  brew bundle dump --describe --global --force
-}
