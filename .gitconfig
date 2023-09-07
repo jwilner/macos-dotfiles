@@ -1,39 +1,41 @@
 # overrides (e.g. a work email) can be defined within .gitconfig.overrides
 [user]
-    name = Joe Wilner
-    email = jhwilner1@gmail.com
+  name = Joe Wilner
+  email = jhwilner1@gmail.com
 [core]
-    editor = vi
-    pager = delta
-    hooksPath = ~/.config/git/hooks
+  editor = vi
+  pager = delta
+  hooksPath = ~/.config/git/hooks
+[init]
+  defaultBranch = main
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
 [diff]
-    colorMoved = default
+  colorMoved = default
 [alias]
-    co = checkout
-    cob = checkout -b
-    br = branch
-    ci = commit
-    st = status
-    s = status -s
-    cl = clone
-    r = reset
-    cp = cherry-pick
-    gr = grep -Ii
-    d = diff
-    dc = diff --cached
-    au = add --update
+  co = checkout
+  cob = checkout -b
+  br = branch
+  ci = commit
+  st = status
+  s = status -s
+  cl = clone
+  r = reset
+  cp = cherry-pick
+  gr = grep -Ii
+  d = diff
+  dc = diff --cached
+  au = add --update
 [credential]
-    helper = osxkeychain
+  helper = osxkeychain
 [push]
-    default = current
+  default = current
 [delta]
-    navigate = true    # use n and N to move between diff sections
-    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-    syntax-theme = Solarized (dark)
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  syntax-theme = Solarized (dark)
 [include]
-    path = .gitconfig.overrides
+  path = .gitconfig.overrides
 
