@@ -1,6 +1,6 @@
 
 " airline/ALE: enable vim-airline integration with ALE
-let g:airline#extensions#ale#enabled = 1
+ let g:airline#extensions#ale#enabled = 1
 " end airline/ALE
 
 " display stuff
@@ -9,7 +9,7 @@ set number
 " enable scrolling, text grabbing etc
 set mouse=a
 
-filetype plugin on
+ filetype plugin on
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -43,3 +43,7 @@ silent! helptags ALL
 
 " play nice with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" gitgutter settings
+set updatetime=100
+set signcolumn=yes

@@ -25,3 +25,6 @@
 [submodule ".config/ls_colors"]
 	path = .config/ls_colors
 	url = https://github.com/trapd00r/LS_COLORS
+[submodule ".vim/pack/jwilner/start/vim-gitgutter"]
+	path = .vim/pack/jwilner/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
