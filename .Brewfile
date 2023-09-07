@@ -15,12 +15,16 @@ brew "awscli"
 brew "bash"
 # Python code formatter
 brew "black"
-# Statistics utility to count lines of code
-brew "cloc"
-# Cross-platform make
-brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Low-level cryptographic library
+brew "nettle"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Emacs dependency management
+brew "cask"
+# Cross-platform make
+brew "cmake"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Simple, fast and user-friendly alternative to find
@@ -35,10 +39,6 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
-# Low-level cryptographic library
-brew "nettle"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Language server for the Go language
@@ -55,6 +55,8 @@ brew "keychain"
 brew "libtool"
 # XML security library
 brew "libxmlsec1"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
 # Python version management
 brew "pyenv"
 # Search tool like grep and The Silver Searcher
@@ -69,15 +71,13 @@ brew "shellcheck"
 brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
 brew "wget"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# Free monospaced font with programming ligatures
-cask "font-fira-code"
+# Developer targeted fonts with a high number of glyphs
+cask "font-fira-code-nerd-font"
 # GPU-based terminal emulator
 cask "kitty"

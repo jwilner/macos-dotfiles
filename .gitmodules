@@ -22,3 +22,6 @@
 [submodule ".vim/pack/jwilner/start/editorconfig-vim"]
 	path = .vim/pack/jwilner/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".config/ls_colors"]
+	path = .config/ls_colors
+	url = https://github.com/trapd00r/LS_COLORS

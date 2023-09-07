@@ -19,6 +19,6 @@ function config {
   git --git-dir="$HOME/.cfg" --work-tree="$HOME" "${@}"
 }
 
-function config_dump_brew {
+function config_brew_dump {
   brew bundle dump --describe --global --force
 }

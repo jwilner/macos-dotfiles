@@ -6,7 +6,13 @@ High level choices:
 
 - [kitty](https://sw.kovidgoyal.net/kitty/) for terminal emulator
 - bash (latest available version) for shell (not zsh)
-- vim for CLI editor (although I assume more involved development happens w/in Jetbrains IDEs)
+- vim for CLI editor
+
+I do more involved development in the suite of Jetbrains IDEs, which I install via the [Jetbrains
+Toolbox](https://www.jetbrains.com/toolbox-app/) and configure out-of-band via the [Settings Sync
+Plugin](https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html#IDE_settings_sync).
+
+I generally use Solarized for theming, which probably dates me to the wrong side of 30, but such is life.
 
 ## installation
 
@@ -59,4 +65,5 @@ Golang I just [download](https://go.dev/dl/) and use the [built in management ap
 
 ## config management
 
-- Update .Brewfile with `brew bundle dump --global --force --describe`
+- Update [.Brewfile](.Brewfile) with `config_brew_dump`
+

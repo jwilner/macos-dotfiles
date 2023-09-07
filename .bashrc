@@ -25,13 +25,17 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # END_KITTY_SHELL_INTEGRATION
 
 # fzf
-. ".config/fzf/fzf.bash"
+. "${HOME}/.config/fzf/fzf.bash"
 
 # git completion
-. ".config/git/completion.sh"
+. "${HOME}/.config/git/completion.sh"
 
 # custom shortcuts
-. ".config/shortcuts.sh"
+. "${HOME}/.config/shortcuts.sh"
+
+alias ls=lsd
+
+eval "$(gdircolors --bourne-shell "${HOME}"/.config/ls_colors/LS_COLORS)"
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"

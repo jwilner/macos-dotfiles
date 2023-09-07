@@ -1,3 +1,18 @@
+$include /etc/inputrc
+
 # use alt & arrow for forward and backward
 "\e[1;9D": backward-word
 "\e[1;9C": forward-word
+
+# colorize tab completion
+set colored-stats On
+# ignore case for completion
+set completion-ignore-case On
+# # show file type on tab completion
+set visible-stats On
+# # show matched completion prefix in color
+set colored-completion-prefix On
+
+set show-all-if-unmodified On
+set show-all-if-ambiguous On
+set mark-symlinked-directories On
