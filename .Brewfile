@@ -57,6 +57,10 @@ brew "libtool"
 brew "libxmlsec1"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# OpenBSD freely-licensed SSH connectivity tools
+brew "openssh"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # Python version management
 brew "pyenv"
 # Search tool like grep and The Silver Searcher
