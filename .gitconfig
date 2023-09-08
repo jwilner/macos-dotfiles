@@ -2,6 +2,7 @@
 [user]
   name = Joe Wilner
   email = jhwilner1@gmail.com
+  signingkey = 0x15D38201FA7E9B2A
 [core]
   editor = vi
   pager = delta
@@ -39,3 +40,5 @@
 [include]
   path = .gitconfig.overrides
 
+[commit]
+  gpgsign = true
