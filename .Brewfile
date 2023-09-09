@@ -5,10 +5,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Record and share terminal sessions
 brew "asciinema"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -17,14 +13,10 @@ brew "bash"
 brew "black"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Low-level cryptographic library
-brew "nettle"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # Emacs dependency management
 brew "cask"
-# Cross-platform make
-brew "cmake"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Simple, fast and user-friendly alternative to find
@@ -39,6 +31,8 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Linting for your git commit messages
+brew "gitlint"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Language server for the Go language
@@ -51,8 +45,6 @@ brew "htop"
 brew "jq"
 # Generic library support script
 brew "libtool"
-# XML security library
-brew "libxmlsec1"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
 # OpenBSD freely-licensed SSH connectivity tools
@@ -77,6 +69,8 @@ brew "starship"
 brew "vim"
 # Internet file retriever
 brew "wget"
+# Tool for managing your YubiKey configuration
+brew "ykman"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Developer targeted fonts with a high number of glyphs
