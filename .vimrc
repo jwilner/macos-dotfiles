@@ -44,6 +44,11 @@ silent! helptags ALL
 " play nice with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" gitgutter settings
+" save automatically
+let g:auto_save = 1
+let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI", "CompleteDone"]
+
 set updatetime=100
+
+" gitgutter settings
 set signcolumn=yes
