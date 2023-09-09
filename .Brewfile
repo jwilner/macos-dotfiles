@@ -49,8 +49,6 @@ brew "hadolint"
 brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# User-friendly front-end to ssh-agent(1)
-brew "keychain"
 # Generic library support script
 brew "libtool"
 # XML security library

@@ -1,6 +1,9 @@
 export EDITOR=vim
 export PATH="${PATH}:${HOME}/bin"
 
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # golang
 export GOPATH="${HOME}/go"
 export GOBIN="${GOPATH}/bin" # default val but being explicit

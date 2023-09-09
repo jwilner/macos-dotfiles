@@ -36,7 +36,7 @@ Use the modern version of bash that was just installed: `chsh -s /usr/local/bin/
 
 ### follow up: gitconfig overrides
 
-Set up a specific work email for git.
+Optionally, set up a specific work email for git.
 
 ```shell
 $ cat <<EOF > .gitconfig.overrides
@@ -45,12 +45,21 @@ $ cat <<EOF > .gitconfig.overrides
 EOF
 ```
 
-### follow up: generate an ssh key
+### follow up: GPG
 
-Usually need this for one reason or another and will then be managed by [funtoo keychain](https://www.funtoo.org/Funtoo:Keychain).
+Insert yubikey and then:
 
 ```shell
-$ ssh-keygen -t ed25519 -C "me@workemail.com"
+$ gpg --edit-card
+gpg/card> fetch
+...
+gpg/card> quit
+
+$ gpg --edit-key
+gpg> trust
+Your decision? 5
+Do you really want to set this key to ultimate trust? (y/N) y
+gpg> quit
 ```
 
 ### follow up: language envs
