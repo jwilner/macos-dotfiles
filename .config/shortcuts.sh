@@ -17,12 +17,15 @@ function jmp {
 # for dot file maintenance
 function config {
   case "${1}" in
-    brew)
-      brew bundle --describe --global "${@:2}"
-      ;;
-    *)
-      git --git-dir="$HOME/.cfg" --work-tree="$HOME" "${@}"
-      ;;
+  brew)
+    brew bundle --describe --global "${@:2}"
+    ;;
+  *)
+    git --git-dir="$HOME/.cfg" --work-tree="$HOME" "${@}"
+    ;;
   esac
 }
 
+function switch_yubikey_gpg {
+  gpg-connect-agent "scd serialno" "learn --force" /bye
+}

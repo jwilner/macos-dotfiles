@@ -38,3 +38,7 @@ max_line_length = 88
 
 [.gitconfig]
 indent_style = tab
+
+[{COMMIT_EDITMSG,MERGE_MSG}]
+# git commits and merge messages
+max_line_length = 80
