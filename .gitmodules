@@ -31,3 +31,6 @@
 [submodule "/Users/jwilner/.vim/pack/jwilner/start/vim-auto-save"]
 	path = /Users/jwilner/.vim/pack/jwilner/start/vim-auto-save
 	url = https://github.com/907th/vim-auto-save
+[submodule ".vim/pack/jwilner/start/committia"]
+	path = .vim/pack/jwilner/start/committia
+	url = https://github.com/rhysd/committia.vim
