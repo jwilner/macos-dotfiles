@@ -52,3 +52,6 @@ set updatetime=100
 
 " gitgutter settings
 set signcolumn=yes
+
+" make committia edit window wider than line wrap
+let g:committia_edit_window_width = 88
