@@ -6,7 +6,7 @@ High level choices:
 
 - [kitty](https://sw.kovidgoyal.net/kitty/) for terminal emulator
 - bash (latest available version) for shell (not zsh)
-- nvim for CLI editor
+- [nvim](https://neovim.io/) for CLI editor
 
 I do more involved development in the suite of Jetbrains IDEs, which I install via the [Jetbrains
 Toolbox](https://www.jetbrains.com/toolbox-app/) and configure out-of-band via the [Settings Sync
