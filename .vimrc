@@ -1,4 +1,3 @@
-
 " airline/ALE: enable vim-airline integration with ALE
  let g:airline#extensions#ale#enabled = 1
 " end airline/ALE
@@ -55,3 +54,14 @@ set signcolumn=yes
 
 " make committia edit window wider than line wrap
 let g:committia_edit_window_width = 88
+let g:committia_status_window_min_height = winheight(0)/4
+let g:committia_status_window_max_height = winheight(0)/2
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+    " Scroll the diff window in insert and command modes with <C-d> and <C-u>
+    noremap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
+    noremap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
+    inoremap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
+    inoremap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
+endfunction
+" end committia

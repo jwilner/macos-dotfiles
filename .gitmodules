@@ -33,4 +33,4 @@
 	url = https://github.com/907th/vim-auto-save
 [submodule ".vim/pack/jwilner/start/committia"]
 	path = .vim/pack/jwilner/start/committia
-	url = https://github.com/rhysd/committia.vim
+	url = https://github.com/jwilner/committia.vim
