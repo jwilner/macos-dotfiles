@@ -23,6 +23,8 @@ brew "direnv"
 brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU awk utility
+brew "gawk"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
@@ -69,6 +71,8 @@ brew "shellcheck"
 brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Opinionated Lua code formatter
+brew "stylua"
 # Internet file retriever
 brew "wget"
 # Tool for managing your YubiKey configuration
