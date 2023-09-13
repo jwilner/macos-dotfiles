@@ -29,7 +29,7 @@
 	path = .vim/pack/jwilner/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "/Users/jwilner/.vim/pack/jwilner/start/vim-auto-save"]
-	path = /Users/jwilner/.vim/pack/jwilner/start/vim-auto-save
+	path = .vim/pack/jwilner/start/vim-auto-save
 	url = https://github.com/907th/vim-auto-save
 [submodule ".vim/pack/jwilner/start/committia"]
 	path = .vim/pack/jwilner/start/committia
