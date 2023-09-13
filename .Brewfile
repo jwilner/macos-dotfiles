@@ -33,6 +33,8 @@ brew "git"
 brew "git-delta"
 # Linting for your git commit messages
 brew "gitlint"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Language server for the Go language
@@ -47,6 +49,8 @@ brew "jq"
 brew "libtool"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
 # Pinentry for GPG on Mac
@@ -65,8 +69,6 @@ brew "shellcheck"
 brew "shfmt"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Vi 'workalike' with many additional features
-brew "vim"
 # Internet file retriever
 brew "wget"
 # Tool for managing your YubiKey configuration

@@ -1,5 +1,5 @@
 export EDITOR=vim
-export PATH="${PATH}:${HOME}/bin"
+export PATH="${HOME}/bin:${PATH}"
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -38,7 +38,7 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 
 alias ls=lsd
 
-eval "$(gdircolors --bourne-shell "${HOME}"/.config/ls_colors/LS_COLORS)"
+eval "$(gdircolors --bourne-shell "${HOME}"/.local/share/ls_colors/LS_COLORS)"
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
