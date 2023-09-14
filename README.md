@@ -1,6 +1,6 @@
 # my macos dotfiles
 
-Dependencies and config for my MacOS development environment. Aggressively updated with dependabot.
+Dependencies and config for my MacOS development environment.
 
 High level choices:
 

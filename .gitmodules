@@ -1,3 +1,0 @@
-[submodule ".local/share/ls_colors"]
-	path = .local/share/ls_colors
-	url = https://github.com/trapd00r/LS_COLORS

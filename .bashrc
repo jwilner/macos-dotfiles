@@ -40,7 +40,7 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 alias ls=lsd
 alias tree="ls --tree"
 
-eval "$(gdircolors --bourne-shell "${HOME}"/.local/share/ls_colors/LS_COLORS)"
+eval "$(gdircolors --bourne-shell "${HOME}"/.config/LS_COLORS)"
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"

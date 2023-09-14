@@ -9,6 +9,8 @@ brew "asciinema"
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Language Server for Bash
+brew "bash-language-server"
 # Python code formatter
 brew "black"
 # GNU File, Shell, and Text utilities
@@ -19,6 +21,8 @@ brew "gnutls"
 brew "cask"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# General purpose Language Server
+brew "efm-langserver"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
@@ -51,14 +55,20 @@ brew "jq"
 brew "libtool"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# Language Server for the Lua language
+brew "lua-language-server"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
 # Python version management
 brew "pyenv"
+# Python Language Server for the Language Server Protocol
+brew "python-lsp-server"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
