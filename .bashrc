@@ -1,4 +1,5 @@
 export EDITOR=vim
+
 export PATH="${HOME}/bin:${PATH}"
 
 GPG_TTY=$(tty)
@@ -37,6 +38,7 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 . "${HOME}/.config/shortcuts.sh"
 
 alias ls=lsd
+alias tree="ls --tree"
 
 eval "$(gdircolors --bourne-shell "${HOME}"/.local/share/ls_colors/LS_COLORS)"
 
