@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+#
+# Dotfile management
+# config sync: bootstraps idempotently
+# config brew ...: delegates to brew with appropriate args
+# config switch-yubikey-gpg: switch gpg yubikey stubs
+# config * ...: delegates to git with appropriate args
+
+readonly BARE_REPO="${BARE_REPO:-${HOME}/.cfg}"
+readonly WORK_TREE="${WORK_TREE:-${HOME}}"
+readonly REMOTE="${REMOTE:-https://github.com/jwilner/macos-dotfiles.git}"
+
+function main() {
+  local cmd="${1}"
+  case "${cmd}" in
+  sync) _sync ;;
+  brew) _brew "${@:1}" ;;
+  switch-gpg-yubikey) _switch_gpg_yubikey ;;
+  *) _cfg_git "${@:1}" ;;
+  esac
+}
+
+function _sync() {
+  if ! _cfg_git remote get-url origin &>/dev/null; then
+    git clone --bare "${REMOTE}" "${BARE_REPO}" || {
+      _log_fatal "Exiting -- unable to clone repo"
+    }
+    _log "cloned ${REMOTE} to ${BARE_REPO}"
+  else
+    _log_debug "bare repo already exists"
+  fi
+
+  local checkout_msg
+  checkout_msg="$(mktemp)"
+
+  if ! _cfg_git checkout 2>"${checkout_msg}"; then
+    grep -q "error: The following untracked working tree files would be overwritten by checkout:" \
+      <"${checkout_msg}" || _log_fatal uh oh
+    while read -r fname; do
+      local src="${WORK_TREE}/${fname}" dst="${WORK_TREE}/${fname}.bak"
+      _log "${src} conflicts with checkout; backing up to ${dst}"
+      mv "${src}" "${dst}"
+    done < <(awk '/^\t/ { print $1 }' <"${checkout_msg}")
+
+    _cfg_git checkout || _log_fatal "Unable to checkout"
+    _log "checked out config to ${WORK_TREE}"
+  else
+    _log_debug "git up to date"
+  fi
+
+  local untracked
+  if ! untracked="$(_cfg_git config --local --get status.showUntrackedFiles)" || [[ "${untracked}" != "no" ]]; then
+    _cfg_git config --local status.showUntrackedFiles no || _log_fatal "unable to hide untracked files"
+    _log "hid untracked files in local config"
+  else
+    _log_debug "local git config up to date"
+  fi
+
+  if ! command -v brew >/dev/null; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" ||
+      _log_fatal "unable to install homebrew"
+    _log "installed homebrew"
+  else
+    _log_debug "homebrew already present"
+  fi
+
+  _brew install --quiet || _log_fatal "brew install failed"
+
+  local bash_path="/usr/local/bin/bash"
+  if ! grep -q "${bash_path}" /etc/shells; then
+    echo "${bash_path}" | sudo tee -a /etc/shells >/dev/null
+    _log "added ${bash_path} to /etc/shells"
+  else
+    _log_debug "bash already present in /etc/shells"
+  fi
+
+  # we can't use /etc/passwd on mac, and this isn't really a good test but c'est la vie
+  if [[ "${SHELL}" != "${bash_path}" ]]; then
+    chsh -s "${bash_path}"
+  else
+    _log_debug "bash is already the default shell"
+  fi
+
+  _log "sync completed successfully!"
+}
+
+function _brew() {
+  brew bundle --describe --global "${@:1}"
+}
+
+function _cfg_git() {
+  git --git-dir="${BARE_REPO}" --work-tree="${WORK_TREE}" "${@}"
+}
+
+function _log() {
+  echo "${@}" >&2
+}
+
+function _log_debug() {
+  [[ -n "${DEBUG}" ]] && echo "${@}" >&2
+}
+
+function _log_fatal() {
+  echo "${@}" >&2
+  exit 1
+}
+
+main "${@}"

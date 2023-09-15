@@ -16,23 +16,22 @@ I generally use Solarized for theming, which probably dates me to the wrong side
 
 ## installation
 
-Installed from a bare git module as described [here](https://www.atlassian.com/git/tutorials/dotfiles).
+Installed from a bare git module inspired by [this](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ```shell
-$ git clone --bare https://github.com/jwilner/macos-dotfiles.git "${HOME}"/.cfg
-$ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-$ config checkout  # might need to resolve conflicts with preexisting .bashrc etc
-$ config --local status.showUntrackedFiles no  # ignore untracked files
-$ config submodule init && config submodule update  # download submodules (vim packages)
-$ command -v brew > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew bundle install --global  # use global Brewfile just checked out
+$ bash -s "$(curl -fsSL https://raw.githubusercontent.com/jwilner/macos-dotfiles/main/bin/sync)" -- sync
 ```
 
+This will (idempotently):
+
+- git clone the repo
+- checkout the worktree, positioning the files as appropriate (backing up any conflicts), 
+- set up git config
+- install Brew
+- Brew install all dependencies
+- register the upgraded version of bash and set the default shell to it
+
 At this point you should probably switch to `kitty` from whatever terminal you were using before.
-
-### follow up: change system shell
-
-Use the modern version of bash that was just installed: `chsh -s /usr/local/bin/bash`.
 
 ### follow up: gitconfig overrides
 
@@ -74,9 +73,11 @@ Golang I just [download](https://go.dev/dl/) and use the [built in management ap
 
 ## config management
 
-`brew bundle` is primed with appropriate args under `config brew`.
+`config` is mainly used as an alias to git for tracking any changes to dotfiles -- e.g. `config add .bashrc`.
+
+However, it has a few more useful commands in it
 
 Run:
-- `config brew install`
+- `config switch-gpg-yubikey` -- switch gpg yubikey stubs
 - `config brew dump --force` -- update [.Brewfile](.Brewfile)
 - `config brew cleanup` -- remove anything not in [.Brewfile](.Brewfile)
