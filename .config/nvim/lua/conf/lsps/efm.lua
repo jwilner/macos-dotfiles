@@ -4,7 +4,6 @@ for lang, conf in require("conf").get_modules("efm") do
 end
 
 return {
-  on_attach = require("lsp-format").on_attach,
   filetypes = vim.tbl_keys(efmlanguages),
   settings = {
     rootMarkers = { ".git/" },
