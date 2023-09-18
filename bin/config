@@ -14,9 +14,9 @@ function main() {
   local cmd="${1}"
   case "${cmd}" in
   sync) _sync ;;
-  brew) _brew "${@:1}" ;;
+  brew) _brew "${@:2}" ;;
   switch-gpg-yubikey) _switch_gpg_yubikey ;;
-  *) _cfg_git "${@:1}" ;;
+  *) _cfg_git "${@}" ;;
   esac
 }
 
@@ -85,7 +85,7 @@ function _sync() {
 }
 
 function _brew() {
-  brew bundle --describe --global "${@:1}"
+  brew bundle --describe --file="${HOME}"/.config/Brewfile "${@}"
 }
 
 function _cfg_git() {

@@ -6,7 +6,7 @@ High level choices:
 
 - [kitty](https://sw.kovidgoyal.net/kitty/) for terminal emulator
 - bash (latest available version) for shell (not zsh)
-- [nvim](https://neovim.io/) for CLI editor configured with a number of [LSPs](.config/nvim/conf/lsps)
+- [nvim](https://neovim.io/) for CLI editor configured with a number of [LSPs](.config/nvim/lua/conf/lsps)
 
 I do more involved development in the suite of Jetbrains IDEs, which I install
 via the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) and
