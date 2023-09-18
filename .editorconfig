@@ -35,6 +35,7 @@ indent_size = 4
 # trailing whitespace can be significant in Markdown
 trim_trailing_whitespace = false
 indent_size = 4
+max_line_length = 80
 
 [*.py]
 indent_size = 4

@@ -57,6 +57,10 @@ brew "libtool"
 brew "lsd"
 # Language Server for the Lua language
 brew "lua-language-server"
+# CLI for Node.js style checker and lint tool for Markdown files
+brew "markdownlint-cli"
+# Language Server Protocol for Markdown
+brew "marksman"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # OpenBSD freely-licensed SSH connectivity tools
@@ -85,11 +89,15 @@ brew "starship"
 brew "stylua"
 # Internet file retriever
 brew "wget"
+# Language Server for Yaml Files
+brew "yaml-language-server"
 # Tool for managing your YubiKey configuration
 brew "ykman"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # GPU-based terminal emulator
 cask "kitty"

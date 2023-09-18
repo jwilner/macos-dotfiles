@@ -2,14 +2,21 @@
 
 Dependencies and config for my MacOS development environment.
 
-High level choices:
+## overview
 
-- [kitty](https://sw.kovidgoyal.net/kitty/) for terminal emulator
-- bash (latest available version) for shell (not zsh)
-- [nvim](https://neovim.io/) for CLI editor configured with a number of [LSPs](.config/nvim/lua/conf/lsps)
+The repository's structure is overlaid on my `${HOME}` directory; thus,
+[.config](.config) maps to the `${HOME}/.config` on my dev machine.
 
-I do more involved development in the suite of Jetbrains IDEs, which I install
-via the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) and
+Highlights:
+
+- dependencies installed with Brew -- see [.config/Brewfile](.config/Brewfile)
+- [kitty](https://sw.kovidgoyal.net/kitty/) for terminal emulator -- see
+  [.config/kitty](.config/kitty)
+- bash (latest available version) for shell (not zsh) -- see [.bashrc](.bashrc)
+- [nvim](https://neovim.io/) for CLI editor -- see [.config/nvim](.config/nvim)
+
+I usually do more involved development in the suite of Jetbrains IDEs, which I
+install via the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) and
 configure out-of-band via the
 [Settings Sync Plugin](https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html#IDE_settings_sync).
 
@@ -18,7 +25,8 @@ of 30, but such is life.
 
 ## installation
 
-Installed from a bare git module inspired by [this](https://www.atlassian.com/git/tutorials/dotfiles).
+Installed from a bare git module inspired by
+[this](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ```shell
 url=https://raw.githubusercontent.com/jwilner/macos-dotfiles/main/bin/sync
@@ -27,12 +35,13 @@ bash -s "$(curl -fsSL $url)" -- sync
 
 This will (idempotently):
 
-- git clone the repo
-- checkout the worktree, positioning the files as appropriate (backing up any conflicts),
-- set up git config
-- install Brew
-- Brew install all dependencies
-- register the upgraded version of bash and set the default shell to it
+1. git clone the repo
+1. checkout the worktree, positioning the files as appropriate (backing up any
+conflicts),
+1. set up git config
+1. install Brew
+1. Brew install all dependencies
+1. register the upgraded version of bash and set the default shell to it
 
 At this point you should probably switch to `kitty` from whatever terminal you
 were using before.
@@ -76,7 +85,8 @@ Language environment managers:
 - Python -> [pyenv](https://github.com/pyenv/pyenv)
 - Rust -> [rustup-init](https://github.com/rust-lang/rustup/blob/master/rustup-init.sh)
 
-Golang I just [download](https://go.dev/dl/) and use the [built in management approach](https://go.dev/doc/manage-install).
+Golang I just [download](https://go.dev/dl/) and use the
+[built in management approach](https://go.dev/doc/manage-install).
 
 ## config management
 
