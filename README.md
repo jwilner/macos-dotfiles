@@ -14,6 +14,8 @@ Highlights:
   [.config/kitty](.config/kitty)
 - bash (latest available version) for shell (not zsh) -- see [.bashrc](.bashrc)
 - [nvim](https://neovim.io/) for CLI editor -- see [.config/nvim](.config/nvim)
+- GPG keys stored on yubikey as described by
+[https://github.com/drduh/YubiKey-Guide](https://github.com/drduh/YubiKey-Guide)
 
 I usually do more involved development in the suite of Jetbrains IDEs, which I
 install via the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) and
