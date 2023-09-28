@@ -25,5 +25,6 @@
   "trouble.nvim": { "branch": "main", "commit": "3f85d8ed30e97ceeddbbcf80224245d347053711" },
   "vim-fugitive": { "branch": "master", "commit": "99db68d9b3304580bd383da7aaee05c7a954a344" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
-  "vim-solarized8": { "branch": "master", "commit": "bde9cab3d9e9368f0b62f94149ab51607fcb8b68" }
+  "vim-solarized8": { "branch": "master", "commit": "bde9cab3d9e9368f0b62f94149ab51607fcb8b68" },
+  "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
 }

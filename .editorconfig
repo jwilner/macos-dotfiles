@@ -17,6 +17,8 @@ max_line_length = 80
 [Makefile*]
 # Makefile syntax requires actual tabs
 indent_style = tab
+# looks wrong w/ smaller
+indent_size = 4
 
 [{go.mod,go.sum}]
 indent_style = tab

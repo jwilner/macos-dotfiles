@@ -4,9 +4,6 @@ return {
     branch = "v2.x",
     lazy = true,
     config = function()
-      -- This is where you modify the settings for lsp-zero
-      -- Note: autocompletion settings will not take effect
-
       require("lsp-zero.settings").preset({})
     end,
   },
@@ -90,9 +87,23 @@ return {
       local rust_tools = require("rust-tools")
       rust_tools.setup({
         server = {
+          cmd = {"ra-multiplex"},
           on_attach = function(_, bufnr)
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format()
+              end,
+            })
             vim.keymap.set("n", "<leader>ca", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
           end,
+          settings = {
+            ['rust-analyzer'] = {
+              check = {
+                command = "clippy"
+              },
+            },
+          },
         },
       })
     end,

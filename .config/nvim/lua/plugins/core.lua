@@ -15,17 +15,14 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("lualine").setup({
-        options = { theme = "solarized_dark" },
-      })
-    end,
+    opts = {
+      options = { theme = "solarized_dark" },
+    }
   },
   {
     "cvigilv/diferente.nvim",
-    config = function()
-      require("diferente").setup()
-    end,
+    opts = {
+    }
   },
   {
     "editorconfig/editorconfig-vim",
@@ -35,11 +32,23 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
-    end,
+    opts = {
+
+    }
   },
-  "Pocco81/auto-save.nvim",
+  {
+    "Pocco81/auto-save.nvim",
+    opts = {
+      debounce_delay = 500,
+      execution_message = {
+        message = function() -- message to print on save
+          return ("AutoSaved at " .. vim.fn.strftime("%H:%M:%S"))
+        end,
+        dim = 0.18, -- dim the color of `message`
+        cleaning_interval = 1250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
+      },
+    },
+  },
   "nvim-lua/plenary.nvim",
   {
     "nvim-telescope/telescope-file-browser.nvim",
@@ -67,6 +76,19 @@ return {
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings

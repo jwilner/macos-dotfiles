@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.github.pr2502.ra-multiplex</string>
+    <key>ProgramArguments</key>
+    <array>
+       <string>/Users/jwilner/.cargo/bin/ra-multiplex</string>
+       <string>server</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+   <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string><![CDATA[/Users/jwilner/.cargo/bin/]]></string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/jwilner/.local/state/ra-multiplex/launchd-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/jwilner/.local/state/ra-multiplex/launchd-stderr.log</string>
+  </dict>
+</plist>

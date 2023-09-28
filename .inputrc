@@ -16,3 +16,6 @@ set colored-completion-prefix On
 set show-all-if-unmodified On
 set show-all-if-ambiguous On
 set mark-symlinked-directories On
+
+# turn off the tab complete bell
+set bell-style none
