@@ -28,4 +28,17 @@ disabled = true
 [line_break]
 disabled = true
 
+[docker_context]
+disabled = true
 
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
+[golang]
+disabled = true
+
+[lua]
+disabled = true
