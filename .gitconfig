@@ -6,7 +6,6 @@
 [core]
 	editor = vi
 	pager = delta
-	hooksPath = ~/.config/git/hooks
 [init]
 	defaultBranch = main
 [interactive]
