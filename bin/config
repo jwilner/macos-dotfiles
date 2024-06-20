@@ -3,7 +3,7 @@
 # Dotfile management
 # config sync: bootstraps idempotently
 # config brew ...: delegates to brew with appropriate args
-# config switch-yubikey-gpg: switch gpg yubikey stubs
+# config switch-gpg-yubikey: switch gpg yubikey stubs
 # config * ...: delegates to git with appropriate args
 
 readonly BARE_REPO="${BARE_REPO:-${HOME}/.cfg}"
@@ -21,6 +21,8 @@ function main() {
 }
 
 function _sync() {
+  _log "starting config sync"
+
   if ! _cfg_git remote get-url origin &>/dev/null; then
     git clone --bare "${REMOTE}" "${BARE_REPO}" || {
       _log_fatal "Exiting -- unable to clone repo"
@@ -90,6 +92,10 @@ function _brew() {
 
 function _cfg_git() {
   git --git-dir="${BARE_REPO}" --work-tree="${WORK_TREE}" "${@}"
+}
+
+function _switch_gpg_yubikey {
+  gpg-connect-agent "scd serialno" "learn --force" /bye
 }
 
 function _log() {

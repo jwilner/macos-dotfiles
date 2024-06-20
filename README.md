@@ -17,11 +17,6 @@ Highlights:
 - GPG keys stored on yubikey as described by
 [https://github.com/drduh/YubiKey-Guide](https://github.com/drduh/YubiKey-Guide)
 
-I usually do more involved development in the suite of Jetbrains IDEs, which I
-install via the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) and
-configure out-of-band via the
-[Settings Sync Plugin](https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html#IDE_settings_sync).
-
 I generally use Solarized for theming, which probably dates me to the wrong side
 of 30, but such is life.
 
@@ -30,10 +25,9 @@ of 30, but such is life.
 Installed from a bare git module inspired by
 [this](https://www.atlassian.com/git/tutorials/dotfiles).
 
-```shell
-url=https://raw.githubusercontent.com/jwilner/macos-dotfiles/main/bin/sync
-bash -s "$(curl -fsSL $url)" -- sync
-```
+`curl -fsSL
+https://raw.githubusercontent.com/jwilner/macos-dotfiles/main/bin/config |
+bash -s -- sync`
 
 This will (idempotently):
 
