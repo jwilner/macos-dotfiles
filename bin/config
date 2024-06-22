@@ -62,13 +62,16 @@ function _sync() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" ||
       _log_fatal "unable to install homebrew"
     _log "installed homebrew"
+    [[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
   else
     _log_debug "homebrew already present"
   fi
 
   _brew install --quiet || _log_fatal "brew install failed"
 
-  local bash_path="/usr/local/bin/bash"
+  local bash_path="/opt/homebrew/bin/bash"
+  [[ -x "${bash_path}" ]] || bash_path=/usr/local/bin/bash
+
   if ! grep -q "${bash_path}" /etc/shells; then
     echo "${bash_path}" | sudo tee -a /etc/shells >/dev/null
     _log "added ${bash_path} to /etc/shells"

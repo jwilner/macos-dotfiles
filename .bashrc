@@ -2,6 +2,8 @@ export EDITOR=vim
 
 export PATH="${HOME}/bin:${PATH}"
 
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
