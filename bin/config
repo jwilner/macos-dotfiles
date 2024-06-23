@@ -69,8 +69,10 @@ function _sync() {
 
   _brew install --quiet || _log_fatal "brew install failed"
 
-  local bash_path="/opt/homebrew/bin/bash"
-  [[ -x "${bash_path}" ]] || bash_path=/usr/local/bin/bash
+  local brew_prefix
+  brew_prefix="$(brew --prefix)" || _log_fatal "unable to get brew prefix"
+
+  local bash_path="${brew_prefix}/bin/bash"
 
   if ! grep -q "${bash_path}" /etc/shells; then
     echo "${bash_path}" | sudo tee -a /etc/shells >/dev/null
@@ -85,6 +87,10 @@ function _sync() {
   else
     _log_debug "bash is already the default shell"
   fi
+
+  for vim_name in vi vim; do
+    [[ -x "${HOME}/bin/${vim_name}" ]] || ln -s "${brew_prefix}/bin/nvim" "${HOME}/bin/${vim_name}"
+  done
 
   _log "sync completed successfully!"
 }
