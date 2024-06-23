@@ -15,7 +15,7 @@ export PATH="${PATH}:${GOBIN}"
 # rust
 export CARGO_HOME="${HOME}/.cargo" # default val but being explicit
 # shellcheck source=.cargo/env
-. "${CARGO_HOME}/env"
+[[ -f "${CARGO_HOME}" ]] && . "${CARGO_HOME}/env"
 export PATH="${PATH}:${CARGO_HOME}/bin"
 
 # python
