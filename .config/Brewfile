@@ -63,6 +63,8 @@ brew "neovim"
 brew "openssh"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Python version management
@@ -91,7 +93,6 @@ brew "yaml-language-server"
 brew "ykman"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
