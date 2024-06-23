@@ -30,9 +30,6 @@ eval "$(pyenv init -)"
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
-# fzf
-. "${HOME}/.config/fzf/fzf.bash"
-
 # git completion
 . "${HOME}/.config/git/completion.sh"
 
@@ -44,6 +41,7 @@ alias tree="ls --tree"
 
 eval "$(gdircolors --bourne-shell "${HOME}"/.config/LS_COLORS)"
 
+eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
