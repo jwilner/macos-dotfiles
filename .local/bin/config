@@ -9,6 +9,7 @@
 readonly BARE_REPO="${BARE_REPO:-${HOME}/.cfg}"
 readonly WORK_TREE="${WORK_TREE:-${HOME}}"
 readonly REMOTE="${REMOTE:-https://github.com/jwilner/macos-dotfiles.git}"
+readonly LOCAL_BIN="${HOME}/.local/bin"
 
 function main() {
   local cmd="${1}"
@@ -89,7 +90,8 @@ function _sync() {
   fi
 
   for vim_name in vi vim; do
-    [[ -x "${HOME}/bin/${vim_name}" ]] || ln -s "${brew_prefix}/bin/nvim" "${HOME}/bin/${vim_name}"
+    local target="${LOCAL_BIN}/${vim_name}"
+    [[ -x "${target}" ]] || ln -s "${brew_prefix}/bin/nvim" "${target}"
   done
 
   _log "sync completed successfully!"
