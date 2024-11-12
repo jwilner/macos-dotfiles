@@ -7,6 +7,8 @@ export PATH="${HOME}/.local/bin:${PATH}"
 GPG_TTY=$(tty)
 export GPG_TTY
 
+export RIPGREP_CONFIG_PATH="${HOME}/.ripgreprc"
+
 # golang
 export GOPATH="${HOME}/go"
 export GOBIN="${GOPATH}/bin" # default val but being explicit
@@ -17,12 +19,6 @@ export CARGO_HOME="${HOME}/.cargo" # default val but being explicit
 # shellcheck source=.cargo/env
 [[ -f "${CARGO_HOME}" ]] && . "${CARGO_HOME}/env"
 export PATH="${PATH}:${CARGO_HOME}/bin"
-
-# python
-# PYENV
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # kitty
 # shellcheck source=/Applications/kitty.app/Contents/Resources/kitty/shell-integration/bash/kitty.bash
